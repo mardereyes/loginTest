@@ -1,0 +1,16 @@
+{
+  "name": "e2eMimecastTest",
+  "version": "0.1.0",
+  "description": "e2e test for login",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:mardereyes/loginTest.git"
+  },
+
+  "devDependencies": {
+
+    "protractor": "^4.0.2",
+    "protractor-jasmine2-html-reporter": "0.0.6",
+    "protractor-jasmine2-screenshot-reporter": "^0.3.1"
+  }
+}
