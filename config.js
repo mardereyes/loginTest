@@ -2,12 +2,12 @@
 exports.config = {
 
   capabilities: {
-    'browserName': 'chrome',
+    'browserName': 'firefox',
     'shardTestFiles': 'true',
     'maxInstances': '1',
   },
 
-  specs: ['login/loginCase3.js'],
+  specs: ['login/loginCase5_6.js'],
 
   baseUrl: 'https://login-alpha.mimecast.com',
   framework: 'jasmine2',

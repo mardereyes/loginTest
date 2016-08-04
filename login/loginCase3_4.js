@@ -2,6 +2,8 @@
 * Protractor e2e test spec
 * Verify that the user cannot log into the Secure Messaging site with an invalid user address.
 (error text – match expected text message).
+Verify that the user cannot log into the Secure Messaging site with an invalid password.
+(error text – match expected text message)
 */
 
 //Variables
