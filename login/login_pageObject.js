@@ -5,13 +5,11 @@
 
 class login {
 
-  static login (username, password) {
-    this.txtEmailAddress.clear();
-    this.txtUsername.sendKeys(username);
-    this.btnNext.get(0).click;
-    this.txtPassword.clear();
+  static FillLoginForm (username, password) {
+    this.txtEmailAddress.sendKeys(username);
+    this.btnSubmit.get(0).click();
     this.txtPassword.sendKeys(password);
-    this.btnSubmit.click();
+    this.btnSubmit.get(0).click();
   }
 
   static get txtEmailAddress() {
@@ -32,6 +30,10 @@ class login {
 
   static get lnkText() {
     return element.all(by.css('.btn-text'));
+  }
+
+  static get lblErrorMessage() {
+    return element(by.css('.text-danger'));
   }
 
 }

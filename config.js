@@ -7,7 +7,7 @@ exports.config = {
     'maxInstances': '1',
   },
 
-  specs: ['login/loginCase2.js'],
+  specs: ['login/loginCase3.js'],
 
   baseUrl: 'https://login-alpha.mimecast.com',
   framework: 'jasmine2',
