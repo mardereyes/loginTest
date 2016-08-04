@@ -1,18 +1,15 @@
 
-export.config = {
+exports.config = {
 
   capabilities: {
-    name: 'Test Job',
     'browserName': 'chrome',
     'shardTestFiles': 'true',
     'maxInstances': '1',
   },
 
-  specs: [
-    '../e2e/website/Products/Music/tests/musBasketSpec.js'
-  ],
+  specs: ['login/loginCase1.js'],
 
-  baseUrl: 'https://login-alpha.mimecast.com/m/secure/login',
+  baseUrl: 'https://login-alpha.mimecast.com',
   framework: 'jasmine2',
   allScriptsTimeout: 10000,
   getPageTimeout: 10000,
@@ -21,7 +18,7 @@ export.config = {
     onComplete: null,
     isVerbose: true,
     showColors: true,
-    defaultTimeoutInterval: 10000,
+    defaultTimeoutInterval: 500000,
     includeStackTrace: true
   }
 

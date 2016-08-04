@@ -5,7 +5,7 @@ Email address and Next button. Verify that the former, also, is enabled and the 
 */
 
 //Variables
-const Login = require('./login.pageObject.js');
+const Login = require ('/Users/maria/Desktop/mimecast/loginTest/login/login_pageObject.js');
 //
 
 beforeEach (() => {
@@ -13,7 +13,7 @@ beforeEach (() => {
 });
 
 beforeEach (() => {
-  browser.get('/');
+  browser.get('/m/secure/login');
   browser.driver.manage().window().setSize(1280, 1024);
   browser.driver.manage().deleteAllCookies();
 });
@@ -28,16 +28,19 @@ describe('Verify main Page elements are displayed', () => {
     expect(Login.btnNext.get(0).isDisplayed()).toBe(true);
   });
 
-  it('Should display disabled "Next" button whenever invalid or emtpy email on email field', () => {
+  it('Should display disabled "Next" button whenever invalid email on email field', () => {
     Login.txtEmailAddress.sendKeys('attorithgmail.com');
-    expect(Login.txtEmailAddress.get(0).isEnabled()).toBe(false);
+    expect(Login.btnNext.get(0).isEnabled()).toBe(false);
+  });
+
+  it('Should display disabled "Next" button whenever emtpy on email field', () => {
     Login.txtEmailAddress.sendKeys('');
-    expect(Login.txtEmailAddress.get(0).isEnabled()).toBe(false);
+    expect(Login.btnNext.get(0).isEnabled()).toBe(false);
   });
 
   it('Should display enabled "Next" button whenever correct email address on email field', () => {
     Login.txtEmailAddress.sendKeys('attorith@gmail.com');
-    expect(Login.txtEmailAddress.get(0).isEnabled()).toBe(true);
+    expect(Login.btnNext.get(0).isEnabled()).toBe(true);
   });
 
 });

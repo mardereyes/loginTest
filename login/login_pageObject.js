@@ -15,10 +15,10 @@ class login {
 
   static get txtEmailAddress() {
     return element(by.id('username'));
-  },
+  }
 
   static get btnNext() {
-    return elementl($$('.btn-primary'));
+    return element.all(by.css('.btn-primary'));
   }
 
 }
