@@ -9,10 +9,6 @@ const Login = require ('../login/login_pageObject.js');
 //
 
 beforeEach (() => {
-  browser.manage().deleteAllCookies();
-});
-
-beforeEach (() => {
   browser.get('/m/secure/login');
   browser.driver.manage().window().setSize(1280, 1024);
   browser.driver.manage().deleteAllCookies();
@@ -25,22 +21,22 @@ describe('Verify main Page elements are displayed', () => {
   });
 
   it('Should display "Next" button', () => {
-    expect(Login.btnNext.get(0).isDisplayed()).toBe(true);
+    expect(Login.btnSubmit.get(0).isDisplayed()).toBe(true);
   });
 
   it('Should display disabled "Next" button whenever invalid email on email field', () => {
     Login.txtEmailAddress.sendKeys('attorithgmail.com');
-    expect(Login.btnNext.get(0).isEnabled()).toBe(false);
+    expect(Login.btnSubmit.get(0).isEnabled()).toBe(false);
   });
 
   it('Should display disabled "Next" button whenever emtpy on email field', () => {
     Login.txtEmailAddress.sendKeys('');
-    expect(Login.btnNext.get(0).isEnabled()).toBe(false);
+    expect(Login.btnSubmit.get(0).isEnabled()).toBe(false);
   });
 
   it('Should display enabled "Next" button whenever correct email address on email field', () => {
     Login.txtEmailAddress.sendKeys('attorith@gmail.com');
-    expect(Login.btnNext.get(0).isEnabled()).toBe(true);
+    expect(Login.btnSubmit.get(0).isEnabled()).toBe(true);
   });
 
 });
