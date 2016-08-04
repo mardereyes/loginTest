@@ -20,8 +20,32 @@ class login {
     return element(by.id('password'));
   }
 
+  static get txtFieldTo() {
+    return element(by.css('.field-to'));
+  }
+
+  static get txtFieldSubject() {
+    return element(by.css('.field-subject'));
+  }
+
+  static get txtComposeBody() {
+    return element(by.css('.note-editable'));
+  }
+
   static get btnSubmit() {
     return element.all(by.css('.btn-primary'));
+  }
+
+  static get btnRefresh() {
+    return element(by.css('.mc-btn-left .cursor-pointer'));
+  }
+
+  static get btnConmpose() {
+    return element(by.css('[ng-click="action()"]'));
+  }
+
+  static get btnSend() {
+    return element(by.css('.icon-paper-plane'));
   }
 
   static get drpDomain() {
@@ -34,6 +58,10 @@ class login {
 
   static get lblErrorMessage() {
     return element(by.css('.text-danger'));
+  }
+
+  static get lblConfirmation() {
+    return element(by.css('tbd'));
   }
 
 }
