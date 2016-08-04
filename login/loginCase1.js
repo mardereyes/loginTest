@@ -5,7 +5,7 @@ Email address and Next button. Verify that the former, also, is enabled and the 
 */
 
 //Variables
-const Login = require ('/Users/maria/Desktop/mimecast/loginTest/login/login_pageObject.js');
+const Login = require ('../login/login_pageObject.js');
 //
 
 beforeEach (() => {
