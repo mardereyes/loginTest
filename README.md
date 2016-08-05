@@ -4,6 +4,8 @@ The following tests follow the requirements sent via secure email.
 
 ##  Install
 
+Pre-requisite: Node v4.4.0 at least.
+
 Clone repository:
 
 Create a folder and clone this respository with `git clone git@github.com:mardereyes/loginTest.git`
