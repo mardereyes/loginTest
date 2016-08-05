@@ -6,7 +6,7 @@ Email address and Next button. Verify that the former, also, is enabled and the 
 
 //Variables
 const Login = require ('../login/login_pageObject.js');
-const Credentials = require ('../login/credentials_pageObject.js');
+const Credentials = require ('../login/credentials.js');
 
 //
 

@@ -13,7 +13,7 @@ Email address to reset, reset button, ‘never mind take me back’ link.
 
 //Variables
 const Login = require ('../login/login_pageObject.js');
-const Credentials = require ('../login/credentials_pageObject.js');
+const Credentials = require ('../login/credentials.js');
 //
 
 beforeEach (() => {

@@ -9,7 +9,7 @@ Verify that the user, when logged in, can compose and send a message.
 
 //Variables
 const Login = require ('../login/login_pageObject.js');
-const Credentials = require ('../login/credentials_pageObject.js');
+const Credentials = require ('../login/credentials.js');
 //
 
 beforeEach (() => {
@@ -36,7 +36,8 @@ describe('Verify login and send an email', () => {
     Login.txtFieldSubject.sendKeys('Protractor Test bogus email');
     Login.txtComposeBody.sendKeys('This is the body for the Protractor Test bogus email. Have a jolly good day!');
     Login.btnSend.click();
-    //expect(Login.lblConfirmation.isDisplayed()).toBe.(true); //I couldn't see the confirmation message css without spamming someome with an @mimecast email address :)
+    //I couldn't see the confirmation message css without spamming someome with an @mimecast email address :)
+    //expect(Login.lblConfirmation.isDisplayed()).toBe.(true);
   });
 
 });

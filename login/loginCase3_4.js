@@ -8,7 +8,7 @@ Verify that the user cannot log into the Secure Messaging site with an invalid p
 
 //Variables
 const Login = require ('../login/login_pageObject.js');
-const Credentials = require ('../login/credentials_pageObject.js');
+const Credentials = require ('../login/credentials.js');
 
 //
 
