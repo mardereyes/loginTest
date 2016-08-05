@@ -38,7 +38,7 @@ Start up server (on a different terminal tab):
 `protractor config.js`
 
 #### Notes
-The file structure of the tests is divided between tests and page objects. I didn't create an extra folder for the POs since it would have only had 1 file.</br>
+The file structure of the tests is divided between tests and page objects. I didn't create an extra folder for the POs since it would have had 1 file only.</br>
 I replaced a console.log reporting for the jasmine-spec-reporter module, which prints the results at the end of the run. It looks more tidy.</br>
 The spec setup on `config.js` has a wildcard in order to run all the tests. This can be updated to run a single spec only.</br>
 I have not added the `credentials_pageObject.js` to the .gitignore file on purpose since it contains placeholder credentials.
