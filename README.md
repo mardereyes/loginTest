@@ -4,7 +4,9 @@ The following tests follow the requirements sent via secure email.
 
 ##  Install
 
-Pre-requisite: Node v4.4.0 at least.
+Pre-requisite: 
+* Node v4.4.0 at least
+* Java JDK 8
 
 Clone repository:
 
