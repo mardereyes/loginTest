@@ -8,6 +8,8 @@ Verify that the user cannot log into the Secure Messaging site with an invalid p
 
 //Variables
 const Login = require ('../login/login_pageObject.js');
+const Credentials = require ('../login/credentials_pageObject.js');
+
 //
 
 beforeEach (() => {
@@ -19,13 +21,13 @@ beforeEach (() => {
 describe('Verify login error messages', () => {
 
   it('Should display error message whenever invalid email address is submited', () => {
-    Login.FillLoginForm('invalid@invalid.com','Prueba2016!');
+    Login.FillLoginForm('invalid@invalid.com',Credentials.password);
     expect(Login.lblErrorMessage.isDisplayed()).toBe(true);
     expect(Login.lblErrorMessage.getText()).toEqual('Invalid user name, password or permissions. Please check you are using the correct URL.');
   });
 
   it('Should display error message whenever invalid password address is submited', () => {
-    Login.FillLoginForm('attorith@gmail.com','invalid');
+    Login.FillLoginForm(Credentials.username,'invalid');
     expect(Login.lblErrorMessage.isDisplayed()).toBe(true);
     expect(Login.lblErrorMessage.getText()).toEqual('Invalid user name, password or permissions. Please check you are using the correct URL.');
   });

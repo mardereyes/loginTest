@@ -13,6 +13,7 @@ Email address to reset, reset button, ‘never mind take me back’ link.
 
 //Variables
 const Login = require ('../login/login_pageObject.js');
+const Credentials = require ('../login/credentials_pageObject.js');
 //
 
 beforeEach (() => {
@@ -22,7 +23,7 @@ beforeEach (() => {
 });
 
 function EmailInput (){
-  Login.txtEmailAddress.sendKeys('attorith@gmail.com');
+  Login.txtEmailAddress.sendKeys(Credentials.username);
   Login.btnSubmit.get(0).click();
 }
 

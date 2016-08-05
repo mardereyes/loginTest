@@ -21,11 +21,11 @@ class login {
   }
 
   static get txtFieldTo() {
-    return element(by.css('.field-to'));
+    return element(by.css('.contacts [type="text"]'));
   }
 
   static get txtFieldSubject() {
-    return element(by.css('.field-subject'));
+    return element(by.css('.field-subject [type="text"]'));
   }
 
   static get txtComposeBody() {

@@ -6,6 +6,8 @@ Email address and Next button. Verify that the former, also, is enabled and the 
 
 //Variables
 const Login = require ('../login/login_pageObject.js');
+const Credentials = require ('../login/credentials_pageObject.js');
+
 //
 
 beforeEach (() => {
@@ -25,7 +27,7 @@ describe('Verify main Page elements are displayed', () => {
   });
 
   it('Should display disabled "Next" button whenever invalid email on email field', () => {
-    Login.txtEmailAddress.sendKeys('attorithgmail.com');
+    Login.txtEmailAddress.sendKeys('nottherightformat.com');
     expect(Login.btnSubmit.get(0).isEnabled()).toBe(false);
   });
 
@@ -35,7 +37,7 @@ describe('Verify main Page elements are displayed', () => {
   });
 
   it('Should display enabled "Next" button whenever correct email address on email field', () => {
-    Login.txtEmailAddress.sendKeys('attorith@gmail.com');
+    Login.txtEmailAddress.sendKeys(Credentials.username);
     expect(Login.btnSubmit.get(0).isEnabled()).toBe(true);
   });
 
