@@ -20,7 +20,7 @@ Install protractor globally:
 
 Download webdriver binaries:
 
-`npm webdriver-manager update`
+`webdriver-manager update`
 
 Start up server (on a different terminal tab):
 
@@ -33,7 +33,7 @@ Start up server (on a different terminal tab):
 `password`: password to be used on login (matching username).</br>
 `recipient`: email recipient for email to be sent on "Should allow user to compose and send an email" scenario.</br>
 
-2- From the `/login/` folder run:
+2- From the `/loginTest/` folder run:
 
 `protractor config.js`
 
